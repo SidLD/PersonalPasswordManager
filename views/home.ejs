@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+
+<div>
+  <form class="password-generator-container container" action="/" method="POST">
+    <% if (email != null){ %>
+        <input type="email" name="email" value="<%=email %>" placeholder="no-name@email.com" required/>
+    <% }else{ %>
+      <input type="email" name="email" placeholder="no-name@email.com" required/>
+    <% } %>
+    <% if (password != null){ %>
+        <input type="text" value="<%=password%>" name="password" />
+    <% }else{ %>
+        <input type="text"  name="password" />
+    <% } %>
+    <input type="submit" id="generatePasswordBtn" value="Generate"/>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
